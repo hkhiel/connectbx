@@ -1,0 +1,190 @@
+@import "_variables";
+
+#about-container {
+
+  p {
+    font-size: 16px;
+    line-height: 35px;
+    font-family: "Roboto Light", sans-serif;
+  }
+
+  #intro {
+    position: relative;
+    height: 100vh;
+    display: block;
+    background-image: url("../img/about-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    padding-top: 20vh;
+
+    p {
+      font-size: 30px;
+      line-height: 55px;
+    }
+
+    span {
+      color: $green;
+      font-family: "Roboto Black", sans-serif;
+    }
+
+    svg {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 90px;
+    }
+
+    @media #{$medium-and-down} {
+      p {
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+
+    @media #{$small-and-down} {
+      padding-top: 5vh;
+      p {
+        font-size: 16px;
+        line-height: 40px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  #origin {
+    padding: 10vh 10vw 8vh 10vw;
+
+    p {
+      padding-left: 30px;
+      border-left: 2px solid $green;
+      text-align: justify;
+    }
+
+    @media #{$medium-and-down} {
+      .title {
+        text-align: center;
+      }
+      p {
+        border-left: none;
+        border-top: 2px solid green;
+        padding: 15px;
+      }
+    }
+    @media #{$small-and-down} {
+      padding: 10vh 0 8vh 0;
+      p {
+        line-height: 30px;
+      }
+    }
+  }
+
+  #team {
+    background-color: $green;
+
+    svg {
+      position: relative;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 90px;
+    }
+
+    p {
+      color: white;
+    }
+
+    #description {
+      img {
+        margin-left: 5px;
+        margin-right: 5px;
+        border: 4px solid $light-green;
+        height: 150px;
+        width: 150px;
+      }
+      @media #{$medium-and-down} {
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      @media #{$small-and-down} {
+        img {
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+
+    @media #{$medium-and-down} {
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+    @media #{$small-and-down} {
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+
+  }
+
+  #now {
+    padding: 8vh 4vh 8vh 4vh;
+    #tools {
+      padding-top: 3vh;
+      padding-bottom: 3vh;
+    }
+
+    .card-panel {
+      p {
+        text-align: justify;
+      }
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+
+    @media #{$large-and-up} {
+      .card-panel {
+        padding-top: 50px;
+        height: 375px;
+      }
+    }
+
+    @media #{$medium-and-down} {
+      .card-panel {
+        height: 225px;
+      }
+    }
+
+    @media #{$small-and-down} {
+      padding: 8vh 0 8vh 0;
+      .card-panel {
+        height: 350px;
+      }
+      .now-raw-text {
+        padding: 8vh 4vh 8vh 4vh;
+      }
+    }
+  }
+
+  #you {
+    margin: 0 150px 200px 150px;
+    padding: 30px;
+    border: 2px solid $green;
+  }
+  @media #{$medium-and-down} {
+    #you {
+      margin: 0 0 100px 0;
+      padding: 10px 15px;
+    }
+  }
+
+}

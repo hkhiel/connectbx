@@ -1,0 +1,23 @@
+
+<ifModule mod_rewrite.c>
+
+RewriteEngine On
+# [L]=[last] signifie que si cette règle s'applique on n'en cherche pas d'autre
+
+# Gestion des pages statiques
+RewriteRule ^home$ views/home.php
+RewriteRule ^contact$ views/contact.php
+RewriteRule ^events$ views/events.php
+RewriteRule ^about$ views/about.php
+RewriteRule ^map$ views/map.php
+RewriteRule ^blog$ blog/wp-content/themes/index.php
+
+RewriteRule ^404 views/errors/404.php
+
+ErrorDocument 404 https://connectbx.be/404
+
+# Forcer le SSL
+#RewriteCond %{SERVER_PORT} 80
+#RewriteRule ^(.*)$ https://connectbx.be/ [R,L]
+
+</ifModule>

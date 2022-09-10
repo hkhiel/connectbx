@@ -1,0 +1,147 @@
+@import "_variables";
+
+$association-details-container-width: 350px;
+$show-list-button: 45px;
+
+#html-map, #body-map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map, #map-parent {
+  position: absolute;
+  width: 100%;
+}
+#map-parent {
+  min-height: 100%;
+}
+#map {
+  top: $navbar-height;
+  min-height: calc(100% - #{$navbar-height});
+  @media #{$medium-and-down} {
+    top: $navbar-height-mobile;
+    min-height: calc(100% - #{$navbar-height-mobile});
+  }
+}
+#filters {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 0;
+  width: calc(100% - #{$association-details-container-width});
+  max-width: 850px;
+  @media #{$medium-and-down} {
+    width: 100%;
+  }
+}
+.map-container {
+  margin: 25px;
+  @media #{$medium-and-down} {
+    margin: 5px;
+  }
+}
+
+#association-details-container {
+  display: inherit;
+  height: calc(100% - #{$navbar-height} - #{$show-list-button});
+  position: absolute;
+  bottom: $show-list-button;
+  left: 0;
+  background-color: #ffffff;
+  width: $association-details-container-width;
+  overflow-y: scroll;
+  @media #{$medium-and-down} {
+    display: none;
+  }
+}
+
+.m-valign-wrapper {
+  @media #{$medium-and-up} {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.card-content {
+  padding-bottom: 0 !important;
+}
+.collapsible,.collapsible-header{
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 0 10px !important;
+}
+#association-detail {
+  margin-top: 10px;
+}
+#show-list {
+  position: absolute;
+  width: $association-details-container-width;
+  height: $show-list-button;
+  bottom: 0;
+  @media #{$medium-and-down} {
+    display: none;
+  }
+}
+#list-association {
+  position: absolute;
+  top: 100%;
+
+  .info {
+    font-size: 13px;
+    border-right: 1px solid #bfc1c1;
+  }
+
+  .description {
+    line-height: 30px;
+  }
+}
+
+#info-window-details {
+  display: none;
+  @media #{$medium-and-down} {
+    display: inherit;
+  }
+}
+#association-details-container {
+  display: inherit;
+  @media #{$medium-and-down} {
+    display: none;
+  }
+}
+
+#association-details {
+  padding: 25px 15px 25px 15px;
+  font-size: 14px;
+
+  #init-message {
+    margin-top: 25vh;
+    font-family: "Roboto Black", sans-serif;
+    font-size: 18px;
+    color: $green;
+    line-height: 45px;
+  }
+
+  p {
+    font-family: "Roboto Light", sans-serif;
+    line-height: 30px;
+  }
+  .name {
+    color: $green;
+  }
+
+  .description {
+    padding-bottom: 20px;
+  }
+  .theme, .website {
+    font-style: italic;
+  }
+}
+
+#select-districts-container, #select-themes-container {
+  .dropdown-content li>a, .dropdown-content li>span {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import "_home";
+@import "_map";
+@import "_events";
+@import "_about";
+//@import "_contact";
+
+/***
+  GENERAL RULES
+***/
+
+/* Brand logo img */
+@media screen and (min-width: $small-screen) { /* SCREEN */
+  #brand-logo-img {
+    height: 64px;
+  }
+}
+@media screen and (max-width: $small-screen) { /* MOBILE */
+  #brand-logo-img {
+    height: 56px;
+  }
+}
+#brand-logo-img {
+  padding: 10px 10px 10px 20px;
+}
+#brand-logo-mobile-menu {
+  height: 128px;
+}
+/*Footer always on the bottom*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1 0 auto;
+  }
+}
+
+a {
+  color: #4caf50;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: $green !important;
+}
+
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid $green !important;
+  box-shadow: 0 1px 0 0 $green !important
+}
+
+

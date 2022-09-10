@@ -1,0 +1,26 @@
+@import "_variables";
+
+#events{
+  .card {
+    .card-title{
+      font-family: "Roboto Black",sans-serif;
+      color: $green;
+    }
+    p {
+      font-family: "Roboto Light",sans-serif;
+      line-height: 30px;
+    }
+
+    .description {
+      border-left: 2px solid $green ;
+    }
+
+    .card-action {
+      a, i {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+
